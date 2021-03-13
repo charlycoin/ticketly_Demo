@@ -1,24 +1,27 @@
-﻿TICKETLY - Sistema de Tickets de Soporte
+SoftwebTickets - Sistema de Tickets de Soporte
 
-	TICKETLY es un sistema de Tickets de soporte de proposito general, codigo abierto y gratis.
+	SoftwebTickets es un sistema de Tickets de soporte de proposito general, codigo abierto y gratis.
 
    #################	TICKETLY     ######################
 
    DESCRIPCIÓN
-    Ticketly es un sistema para gestionar tickets de soporte usando proyectos, categorias, prioridades y mas, ideal para todo tipo de negocios, desarrollo de proyectos, gestion personal, etc, el sistema esta desarrollado con PHP y MySQL.
-   	TICKETLY es un sistema de tickets de soporte en el que puedes rellenar tu perfil, agregar ticket, proyectos y categorias, generar reportes y mucho mas.	
+    SoftwebTickets es un sistema para gestionar tickets de soporte usando proyectos, categorias, prioridades y mas, ideal para todo tipo de negocios, desarrollo de proyectos, gestion personal, etc, el sistema esta desarrollado con PHP y MySQL.
+   	SoftwebTickets es un sistema de tickets de soporte en el que puedes rellenar tu perfil, agregar ticket, proyectos y categorias, generar reportes y mucho mas.	
 
 
 
 ------------------------- MODULOS ---------------------
-   	Defino a grandes rasgos los modulos generales del sistema
+   	Descripción básica de cada uno de los modulos del sistema
     
     Usuarios: Se puede agregar editar y eliminar usuarios.
-    Tickets: Cada usuario puede agregar un ticket.
+    Analytics: En el dashborad se puede visualizar estadisticas
+    Tickets: Cada usuario puede agregar un ticket, editarlo, eliminarlo y realizar atenciones o bitacoras al ticket.
     Proyectos: Cada usuario puede agregar los proyectos que desee.
-    Perfiles: Los usuarios pueden rellenar su perfil
-    Categorias: Los usuarios agregar categorias.
-    Reportes: Los usuarios pueden generar reportes.
+    Perfiles: Los usuarios pueden rellenar su perfil.
+    Categorias: Los usuarios pueden agregar categorias.
+    Clientes: Los usuarios pueden agregar clientes.
+    Eventos: Los usuarios pueden agregar eventos.
+    Reportes: Los usuarios pueden generar reportes, descargarlos en PDF o Excel.
     Asesores:Se puede agregar editar y eliminar asesores de soporte.
 
 
