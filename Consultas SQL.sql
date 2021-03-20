@@ -75,3 +75,22 @@ ALTER TABLE `permisos`
 ALTER TABLE `permisos`
   ADD CONSTRAINT `permisos_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `rol` (`id_rol`),
   ADD CONSTRAINT `permisos_ibfk_2` FOREIGN KEY (`modulo_id`) REFERENCES `modulo` (`id_modulo`);
+
+
+
+
+alter table `user`
+  add `rolid` int(11) NOT NULL;
+
+
+ALTER TABLE `user`  
+  ADD KEY `rolid` (`rolid`);
+
+  
+ ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`rolid`) REFERENCES `rol` (`id_rol`);
+
+
+
+
+  

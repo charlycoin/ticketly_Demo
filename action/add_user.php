@@ -11,14 +11,14 @@
 			$errors[] = "Selecciona el estado";
 		} else if (empty($_POST['password'])){
 			$errors[] = "Contraseña vacío";
-		} else if ($_POST['role']==""){
+		} else if ($_POST['rol_id']==""){
 			$errors[] = "Seleccione un Rol ";
 		} else if (
 			!empty($_POST['name']) &&
 			!empty($_POST['lastname']) &&
 			$_POST['status']!="" &&
 			!empty($_POST['password'])&&
-			!empty($_POST['role'])
+			!empty($_POST['rol_id'])
 		){
 
 		include "../config/config.php";//Contiene funcion que conecta a la base de datos
@@ -29,7 +29,8 @@
 		$email=$_POST["email"];
 		$password=mysqli_real_escape_string($con,(strip_tags(sha1(md5($_POST["password"])),ENT_QUOTES)));
 		$status=intval($_POST['status']);
-		$role=mysqli_real_escape_string($con,(strip_tags($_POST["role"],ENT_QUOTES)));
+		//$role=mysqli_real_escape_string($con,(strip_tags($_POST["rol_id"],ENT_QUOTES)));
+		$role = $_POST["rol_id"];
 		$end_name=$name." ".$lastname;
 		$created_at=date("Y-m-d H:i:s");
 		$user_id=$_SESSION['user_id'];
@@ -38,7 +39,7 @@
 		$is_admin=0;
 		if(isset($_POST["is_admin"])){$is_admin=1;}
 
-			$sql="INSERT INTO user ( name, password, email, profile_pic, is_active, created_at, role) VALUES ('$end_name','$password','$email','$profile_pic',$status,'$created_at','$role')";
+			$sql="INSERT INTO user ( name, password, email, profile_pic, is_active, created_at, rol_id) VALUES ('$end_name','$password','$email','$profile_pic',$status,'$created_at','$role')";
 			$query_new_insert = mysqli_query($con,$sql);
 				if ($query_new_insert){
 					$messages[] = "El usuario ha sido ingresado satisfactoriamente.";

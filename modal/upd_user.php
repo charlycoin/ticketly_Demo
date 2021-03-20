@@ -1,4 +1,6 @@
-
+<?php        
+    $roles =mysqli_query($con, "select * from rol");        
+?>
     <div class="modal fade bs-example-modal-lg-upd" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
@@ -27,10 +29,11 @@
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <select class="form-control" required name="mod_role" id="mod_role">
-                                    <option value="" selected>-- Seleccione el rol --</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="soporte">Soporte</option>  
+                            <select class="form-control" name="mod_rol_id">
+                                    <option selected="" value="" selected>-- Seleccione el rol --</option>
+                                    <?php foreach($roles as $p):?>
+                                    <option value="<?php echo $p['id_rol']; ?>"><?php echo $p['nombre_rol']; ?></option>
+                                  <?php endforeach; ?>  
                             </select>
                         </div>
                         <div class="form-group">

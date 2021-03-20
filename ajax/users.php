@@ -83,7 +83,12 @@
                             $name=$r['name'];
                             $email=$r['email'];
                             $created_at=date('d/m/Y', strtotime($r['created_at']));
-                            $role=$r['role'];
+                            $role=$r['rol_id'];
+
+                            $sql = mysqli_query($con, "select * from rol where id_rol=$role");
+                            if($c=mysqli_fetch_array($sql)) {
+                                $name_rol=$c['nombre_rol'];
+                            }
                 ?>
                     <input type="hidden" value="<?php echo $name;?>" id="name<?php echo $id;?>">
                     <input type="hidden" value="<?php echo $email;?>" id="email<?php echo $id;?>">
@@ -95,7 +100,7 @@
                         <td><?php echo $email;?></td>
                         <td ><?php echo $status_f; ?></td>
                         <td><?php echo $created_at;?></td>
-                        <td><?php echo $role;?></td>
+                        <td><?php echo $name_rol;?></td>
                         <td ><span class="pull-right">
                         <a href="#" class='btn btn-default' title='Editar producto' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target=".bs-example-modal-lg-upd"><i class="glyphicon glyphicon-edit"></i></a> 
                         <a href="#" class='btn btn-default' title='Borrar producto' onclick="eliminar('<?php echo $id; ?>')"><i class="glyphicon glyphicon-trash"></i> </a></span></td>

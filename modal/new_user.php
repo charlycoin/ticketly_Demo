@@ -1,3 +1,7 @@
+<?php        
+    $roles =mysqli_query($con, "select * from rol");        
+?>
+
   <div> <!-- Modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-add"><i class="fa fa-plus-circle"></i> Agregar Usuario</button>
     </div>
@@ -32,12 +36,14 @@
                             </select>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <select class="form-control" required name="role">
-                                    <option value="" selected>-- Seleccione el rol --</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="soporte">Soporte</option>  
+                            <select class="form-control" name="rol_id">
+                                    <option selected="" value="" selected>-- Seleccione el rol --</option>
+                                    <?php foreach($roles as $p):?>
+                                    <option value="<?php echo $p['id_rol']; ?>"><?php echo $p['nombre_rol']; ?></option>
+                                  <?php endforeach; ?>  
                             </select>
                         </div>
+
                         <div class="form-group">
                             <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Contraseña<span class="required">*</span>
                             </label> -->
