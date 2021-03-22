@@ -26,7 +26,7 @@ td    { vertical-align: top; }
             </td>
             <td style="width: 25%; color: #444444;">
                 <img style="width: 100%;" src="./res/logo.gif" alt="Logo"><br>
-                REPORTE CASOS DE SOPORTE
+                REPORTE TICKETS DE SOPORTE
             </td>
         </tr>
     </table>
@@ -60,17 +60,17 @@ td    { vertical-align: top; }
     </i>
     
     <br>
-    A continuación se puede visualizar el listado de casos radicados para soporte, con su respectivo estado y fecha de radicación<br>
+    A continuación se puede visualizar el listado de tickets radicados para soporte, con su respectivo estado y fecha de radicación<br>
     <br>
     <table cellspacing="0" style="width: 100%; border: solid 1px black; background: #F7F7F7; font-size: 10pt;">
         <colgroup>
             <col style="width: 10%; text-align: left">
-            <col style="width: 17%; text-align: left">
+            <col style="width: 27%; text-align: left">
             <col style="width: 10%; text-align: left">
-            <col style="width: 18%; text-align: left">
+            <col style="width: 15%; text-align: left">
             <col style="width: 10%; text-align: right">
             <col style="width: 12%; text-align: right">
-            <col style="width: 24%; text-align: right">
+            <col style="width: 14%; text-align: right">
         </colgroup>
         <thead>
             <tr style="background: #E7E7E7;">
@@ -145,11 +145,14 @@ td    { vertical-align: top; }
             $total = 0;
             foreach($users as $user){
                 $ticket_id=$user['id'];
+                //Primera forma para ver la fecha corta en el orden Dìa/Mes/Año
+                $created_at=date('d/m/Y', strtotime($user['created_at']));
                 //$project_id=$user['project_id'];
                 $priority_id=$user['priority_id'];
                 $kind_id=$user['kind_id'];
                 $category_id=$user['category_id'];
                 $status_id=$user['status_id'];
+                $dates=$user['created_at'];
 
 
                 $ticket=mysqli_query($con, "select * from ticket where id=$ticket_id");
@@ -158,6 +161,10 @@ td    { vertical-align: top; }
                 $kinds = mysqli_query($con,"select * from kind where id=$kind_id");
                 //$project  = mysqli_query($con, "select * from project where id=$project_id");
                 $medic = mysqli_query($con,"select * from priority where id=$priority_id");
+                //Segunda forma para ver la fecha corta en el orden Año/Mes/Dìa
+                /*$date=mysqli_query($con, "select DATE(created_at) AS fecha from ticket where id=$ticket_id");
+                $row= mysqli_fetch_array($date);
+                $fecht = $row['fecha'];*/ //Poner esta varible en el campo fecha para que muestre el formato corto
 
                 
                 ?>
@@ -180,7 +187,7 @@ td    { vertical-align: top; }
                 <?php foreach($status as $stat){?>
                 <td><?php echo $stat['status_name']; ?></td>
                  <?php } ?>
-                <td><?php echo $user['created_at']; ?></td>
+                <td><?php echo $created_at; ?></td>
                 
                 </tr>
              <?php  

@@ -34,9 +34,9 @@
                     <li class="<?php if(isset($active4)){echo $active4;}?>">
                         <a href="projects.php"><i class="fa fa-list-alt"></i> Proyectos</a>
                     </li>
-                    <li class="<?php if(isset($active5)){echo $active5;}?>">
+                    <!--<li class="<?php if(isset($active5)){echo $active5;}?>">
                         <a href="tasks.php"><i class="fa fa-tasks"></i> Tareas</a>
-                    </li>
+                    </li>-->
                     <li class="<?php if(isset($active6)){echo $active6;}?>">
                         <a href="categories.php"><i class="fa fa-align-left"></i> Categorias</a>
                     </li>

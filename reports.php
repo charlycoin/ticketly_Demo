@@ -190,6 +190,10 @@
                 $kinds = mysqli_query($con,"select * from kind where id=$kind_id");
                 $project  = mysqli_query($con, "select * from project where id=$project_id");
                 $medic = mysqli_query($con,"select * from priority where id=$priority_id");
+                $date=mysqli_query($con, "select DATE(created_at) AS fecha,DATE(updated_at) AS Fech_Actu from ticket where id=$ticket_id");
+                $row= mysqli_fetch_array($date);
+                $fecht = $row['fecha'];
+                $Fech_Act= $row['Fech_Actu'];
 
                 
                 ?>
@@ -214,8 +218,9 @@
                 <?php foreach($status as $stat){?>
                 <td><?php echo $stat['status_name']; ?></td>
                  <?php } ?>
-                <td><?php echo $user['created_at']; ?></td>
-                <td><?php echo $user['updated_at']; ?></td>
+                <td><?php echo $fecht; ?></td>
+                <td><?php echo $Fech_Act; ?></td>
+                <!--<td><?php echo $user['updated_at']; ?></td>-->
                 </tr>
              <?php  
                 
