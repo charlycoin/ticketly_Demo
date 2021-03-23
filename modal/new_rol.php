@@ -31,23 +31,6 @@
                                     <option value="0" >Inactivo</option>  
                             </select>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <select class="form-control" name="rol_id">
-                                    <option selected="" value="" selected>-- Seleccione el rol --</option>
-                                    <?php foreach($roles as $p):?>
-                                    <option value="<?php echo $p['id_rol']; ?>"><?php echo $p['nombre_rol']; ?></option>
-                                  <?php endforeach; ?>  
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Contraseña<span class="required">*</span>
-                            </label> -->
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="password" id="password" name="password" required class="form-control col-md-7 col-xs-12" placeholder="Contraseña*">
-                            </div>
-                        </div>
-
                         <div class="ln_solid"></div>
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
