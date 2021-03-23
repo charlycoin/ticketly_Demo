@@ -56,8 +56,9 @@
                       </a>
                       <ul class="treeview-menu" style="display: none;">
                              <a href="clientes.php"><i class="fa fa-child"></i> Clientes</a>                        
-                        </br><a href="users.php"><i class="fa fa-users"></i> Usuarios</a>                        
-                        </br><a href="asesor.php"><i class="fa fa-child"></i> Asesores</a>                    
+                         <br><a href="users.php"><i class="fa fa-users"></i> Usuarios</a>
+                         <br><a href="roles.php"><i class="fa fa-user"></i> Roles</a>
+                         <br><a href="asesor.php"><i class="fa fa-child"></i> Asesores</a>                    
                       </ul>
                     </li>
                     <!-- <li class="<?php if(isset($active9)){echo $active9;}?>">
