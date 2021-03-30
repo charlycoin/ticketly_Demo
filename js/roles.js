@@ -6,7 +6,7 @@
 			var q= $("#q").val();
 			$("#loader").fadeIn('slow');
 			$.ajax({
-				url:'./ajax/clientes.php?action=ajax&page='+page+'&q='+q,
+				url:'./ajax/roles.php?action=ajax&page='+page+'&q='+q,
 				 beforeSend: function(objeto){
 				 $('#loader').html('<img src="./images/ajax-loader.gif"> Cargando...');
 			  },
@@ -17,15 +17,17 @@
 				}
 			})
 		}
+
+	
 		
-		function eliminar (id_cliente)
+			function eliminar (id_rol)
 		{
 			var q= $("#q").val();
-		if (confirm("Realmente deseas eliminar los datos del Cliente?")){	
+		if (confirm("Realmente deseas eliminar el Rol?")){	
 		$.ajax({
         type: "GET",
-        url: "./ajax/clientes.php",
-        data: "id_cliente="+id_cliente,"q":q,
+        url: "./ajax/roles.php",
+        data: "id_rol="+id_rol,"q":q,
 		 beforeSend: function(objeto){
 			$("#resultados").html("Mensaje: Cargando...");
 		  },
@@ -36,3 +38,8 @@
 			});
 		}
 		}
+		
+		
+		
+		
+

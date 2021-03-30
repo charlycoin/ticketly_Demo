@@ -25,7 +25,7 @@
                             <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                         </div>                        
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <select class="form-control" required name="status">
+                            <select class="form-control" required name="status_rol">
                                     <option value="" selected>-- Selecciona estado --</option>
                                     <option value="1" >Activo</option>
                                     <option value="0" >Inactivo</option>  

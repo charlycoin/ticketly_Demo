@@ -57,6 +57,7 @@
 <?php include "footer.php" ?>
 
 <script type="text/javascript" src="js/roles.js"></script>
+<script type="text/javascript" src="js/VentanaCentrada.js"></script>
 
 <script>
 $( "#add_rol" ).submit(function( event ) {
@@ -102,14 +103,12 @@ $( "#upd_rol" ).submit(function( event ) {
 })
 
     function obtener_datos(id){
-            var name = $("#name"+id).val();
-            var email = $("#email"+id).val();
-            var status = $("#status"+id).val();
-            var role = $("#role"+id).val();
-            $("#mod_id").val(id);
-            $("#mod_name").val(name);
-            $("#mod_email").val(email);
-            $("#mod_status").val(status);
-            $("#mod_role").val(role);
+            var name = $("#nombre_rol"+id).val();
+            var description = $("#descripcion_rol"+id).val();
+            var status = $("#status_rol"+id).val();            
+            $("#mod_id_rol").val(id);
+            $("#mod_nombre_rol").val(name);
+            $("#mod_email").val(description);
+            $("#mod_status_rol").val(status);            
         }
 </script>
