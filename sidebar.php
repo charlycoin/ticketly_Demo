@@ -11,18 +11,17 @@
 
                     <li class="<?php if(isset($active3)){echo $active3;}?>">
                       <a href="#"> 
-                        <i class="fa fa-sitemap"></i> <span>Tickets</span>
+                        <i class="fa fa-sitemap" ></i> <span>Tickets</span>
                         <span class="pull-right-container">
-                          <i class="fa fa-angle-left pull-right"></i>
+                          <i class="fa fa-angle-down pull-right"></i>
                         </span>
                       </a>
-                      <ul class="treeview-menu" style="display: none;">                         
-                         <a href="Tickets_Registrados.php">
-                            <i class="fa fa-ticket"></i> Tickets Registrados
-                         </a>                        
-                        </br><a href="Tickets_Asignados.php"><i class="fa fa-ticket"></i> Tickets Asignados</a>
-                        </br><a href="Tickets_en_proceso.php"><i class="fa fa-ticket"></i> Tickets En Proceso</a>                        
-                        </br><a href="cerrados.php"><i class="fa fa-ticket"></i> Tickets Finalizados</a>
+                      <ul class="treeview-menu" style="display: none;">
+                        <li><a class="treeview-item" href="Tickets_Registrados.php">Tickets Registrados</a></li>
+                        <li><a class="treeview-item" href="Tickets_Asignados.php">Tickets Asignados</a></li>
+                        <li><a class="treeview-item" href="Tickets_en_proceso.php">Tickets En Proceso</a></li>
+                        <li><a class="treeview-item" href="cerrados.php">Tickets Finalizados</a></li>
+                        <!--</br><a href="cerrados.php"><i class="fa fa-ticket"></i> Tickets Finalizados</a>-->
                         <!--</br><a href="tickets.php"><i class="fa fa-tags"></i> Agregar Tickets</a> -->
                         <!-- <li class=""><a href="asignados.php"><i class="fa fa-circle-o"></i> Tickets Asignados</a></li>-->
                         <!-- </br><a href="atender_casos.php"><i class="fa fa-tags"></i> Atender Tickets</a> -->
@@ -51,14 +50,15 @@
                       <a href="#"> 
                         <i class="fa fa-cog"></i> <span>Configuración</span>
                         <span class="pull-right-container">
-                          <i class="fa fa-angle-left pull-right"></i>
+                          <i class="fa fa-angle-down pull-right"></i>
                         </span>
                       </a>
                       <ul class="treeview-menu" style="display: none;">
-                             <a href="clientes.php"><i class="fa fa-child"></i> Clientes</a>                        
-                         <br><a href="users.php"><i class="fa fa-users"></i> Usuarios</a>
-                         <br><a href="roles.php"><i class="fa fa-user"></i> Roles</a>
-                         <br><a href="asesor.php"><i class="fa fa-child"></i> Asesores</a>                    
+                        <li><a class="treeview-item" href="asesor.php">Asesores</a></li>
+                        <li><a class="treeview-item" href="clientes.php">Clientes</a></li>                        
+                    <!--<li><a class="treeview-item" href="permisos.php">Permisos</a></li>-->
+                        <li><a class="treeview-item" href="roles.php">Roles</a></li>
+                        <li><a class="treeview-item" href="users.php">Usuarios</a></li>                                          
                       </ul>
                     </li>
                     <!-- <li class="<?php if(isset($active9)){echo $active9;}?>">
