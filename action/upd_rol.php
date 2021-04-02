@@ -1,28 +1,27 @@
-<?php
+<?php	
 	session_start();
 	/*Inicia validacion del lado del servidor*/
-	if (empty($_POST['mod_id'])) {
+	if (empty($_POST['mod_id_rol'])) {
            $errors[] = "ID vacío";
-        }else if (empty($_POST['mod_description'])){
+        }else if (empty($_POST['mod_nombre_rol'])){
+			$errors[] = "Nombre vacío";
+		} else if (empty($_POST['mod_descripcion_rol'])){
 			$errors[] = "Descripción vacío";
-		} else if (empty($_POST['mod_name'])){
-			$errors[] = "Nombre Vacio";
 		} else if (
-			!empty($_POST['mod_name']) &&
-			!empty($_POST['mod_description'])
+			!empty($_POST['mod_nombre_rol']) &&
+			!empty($_POST['mod_descripcion_rol'])
 		){
 
-		include "../config/config.php";//Contiene funcion que conecta a la base de datos
+		require_once "../config/config.php";//Contiene funcion que conecta a la base de datos
 
-		$name = $_POST["mod_name"];
-		$description = $_POST["mod_description"];
-		
-		$id=$_POST['mod_id'];
+		$id=$_POST['mod_id_rol'];
+		$name = $_POST["mod_nombre_rol"];
+		$description = $_POST["mod_descripcion_rol"];
 
-		$sql="update project set proyect_name=\"$name\",description=\"$description\" where id=$id";
+		$sql="update rol set nombre_rol=\"$name\",descripcion_rol=\"$description\" where id_rol=$id";
 		$query_update = mysqli_query($con,$sql);
 			if ($query_update){
-				$messages[] = "EL proyecto ha sido actualizado satisfactoriamente.";
+				$messages[] = "EL rol ha sido actualizado satisfactoriamente.";
 			} else{
 				$errors []= "Lo siento algo ha salido mal intenta nuevamente.".mysqli_error($con);
 			}

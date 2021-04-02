@@ -1,6 +1,3 @@
-<?php        
-    $roles =mysqli_query($con, "select * from rol");        
-?>
 
   <div> <!-- Modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg-add"><i class="fa fa-plus-circle"></i> Agregar Rol</button>

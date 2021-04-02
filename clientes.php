@@ -90,10 +90,10 @@ $( "#upd" ).submit(function( event ) {
             url: "action/upd_cliente.php",
             data: parametros,
              beforeSend: function(objeto){
-                $("#result_cliente").html("Mensaje: Cargando...");
+                $("#result_cliente2").html("Mensaje: Cargando...");
               },
             success: function(datos){
-            $("#result_cliente").html(datos);
+            $("#result_cliente2").html(datos);
             $('#upd_data').attr("disabled", false);
             load(1);
           }

@@ -91,10 +91,10 @@ $( "#upd_rol" ).submit(function( event ) {
             url: "action/upd_rol.php",
             data: parametros,
              beforeSend: function(objeto){
-                $("#result_user2").html("Mensaje: Cargando...");
+                $("#result_rol2").html("Mensaje: Cargando...");
               },
             success: function(datos){
-            $("#result_user2").html(datos);
+            $("#result_rol2").html(datos);
             $('#upd_data').attr("disabled", false);
             load(1);
           }
@@ -108,7 +108,7 @@ $( "#upd_rol" ).submit(function( event ) {
             var status = $("#status_rol"+id).val();            
             $("#mod_id_rol").val(id);
             $("#mod_nombre_rol").val(name);
-            $("#mod_email").val(description);
+            $("#mod_descripcion_rol").val(description);
             $("#mod_status_rol").val(status);            
         }
 </script>
