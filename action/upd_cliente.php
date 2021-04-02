@@ -1,6 +1,6 @@
 <?php	
 
-	//upd asesor by Carlos Bejarano
+	//upd cliente by Carlos Bejarano
 	session_start();
 
 		if (empty($_POST['mod_id_rol'])) {

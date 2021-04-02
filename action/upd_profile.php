@@ -1,6 +1,6 @@
 <?php
 
-	//update profile by abisoft https://github.com/amnersaucedososa
+	//upd profile by Carlos Bejarano
 	session_start();
 
 	if (!isset($_SESSION['user_id']) && $_SESSION['user_id']==null) {
