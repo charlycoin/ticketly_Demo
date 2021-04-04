@@ -2,8 +2,6 @@
 ///// INCLUIR LA CONEXIÓN A LA BD /////////////////
 //require_once '../config/config.php';
 ///// CONSULTA A LA BASE DE DATOS /////////////////
-$sql = "SELECT * FROM ticket ORDER BY created_at desc";
-$resultado = $con->query($sql);
 	$tickets = mysqli_query($con, "select * from ticket");
     $projects = mysqli_query($con, "select * from project");
     $priorities = mysqli_query($con,  "select * from priority");
@@ -86,7 +84,7 @@ $resultado = $con->query($sql);
                                 </div>                               
                                 
                                 <div class="col-lg-6">                                    
-                                    <input type="submit" name="generar_reporte">
+                                    <button style="margin-right: 3px" class="btn btn-sm btn-success"><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar Reporte</button>
                                 </div>                                
                             </div>
                         </form>
