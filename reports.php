@@ -15,9 +15,10 @@
 
     <div class="right_col" role="main"><!-- page content -->
         <div class="">
-            <div class="page-title">
+            <div class="page-title">                
                 <div class="clearfix"></div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
+                    <?php  include("modal/new_report.php"); ?>
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Reportes</h2>
@@ -31,7 +32,7 @@
                         </div>
 
                         <!-- form search -->
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" role="form" >
                             <input type="hidden" name="view" value="reports">
                             <div class="form-group">
                             <div class="col-lg-3">
@@ -63,7 +64,7 @@
                             <div class="col-lg-3">
                                 <div class="input-group">
                                   <span class="input-group-addon">INICIO</span>
-                                  <input type="date" name="start_at" value="<?php if(isset($_GET["start_at"]) && $_GET["start_at"]!=""){ echo $_GET["start_at"]; } ?>" class="form-control" placeholder="Palabra clave">
+                                  <input type="date" name="start_at" value="<?php if(isset($_GET["created_at"]) && $_GET["created_at"]!=""){ echo $_GET["start_at"]; } ?>" class="form-control" placeholder="Palabra clave">
                                 </div>
                             </div>
                             <div class="col-lg-3">
@@ -93,18 +94,24 @@
                                           <?php endforeach; ?>
                                         </select>
                                     </div>
-                                </div>
+                                </div>                               
                                 
                                 <div class="col-lg-6">                                    
-                                    <button style="margin-right: 3px" class="btn btn-sm btn-success">Procesar</button>
+                                    <button style="margin-right: 3px" class="btn btn-sm btn-success" name="generar_reporte"><span class="fa fa-file-excel-o" aria-hidden="true"></span> Procesar</button>
                                     <a style="margin-right: 3px" target="_blank" href="LibreriaHTML2PDF/index.php" class="btn btn-sm btn-success">
                                       <span class="fa fa-file-pdf-o" aria-hidden="true"></span> Generar_PDF
                                     </a>
-                                    <a style="margin-right: 3px" href="PHPExcel/reporte.php" class="btn btn-sm btn-success" target="_blank"><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar_Excel</i></a>
+                                    <a style="margin-right: 3px" href="PHPExcel/reporte2.php" class="btn btn-sm btn-success" target="_blank"><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar_Excel</i></a>
+                                    <a style="margin-right: 3px" class="btn btn-sm btn-success" data-toggle="modal" data-target="#new_report" ><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar Reporte</i></a>
                                 </div>                                
                             </div>
                         </form>
                         <!-- end form search -->
+                        <!--<form method="post" class="form" action="PHPExcel/reporte.php">
+                            <input type="date" name="start_at">
+                            <input type="date" name="created_at">
+                            <input type="submit" name="generar_reporte">
+                        </form>-->
 
                          <?php
                                         $users= array();
@@ -144,7 +151,7 @@
                                             $sql .= " and ";
                                         }
 
-                                            $sql .= " ( date_at >= \"".$_GET["start_at"]."\" and date_at <= \"".$_GET["created_at"]."\" ) ";
+                                            $sql .= " ( created_at >= \"".$_GET["start_at"]."\" and created_at <= \"".$_GET["created_at"]."\" ) ";
                                         }
 
                                                 $users = mysqli_query($con, $sql);
@@ -270,3 +277,4 @@
         }); 
     }); 
 </script>
+

@@ -1,23 +1,11 @@
 <?php
 	//Incluimos librería y archivo de conexión
 	require_once '../config/config.php';
-	require 'Classes/PHPExcel.php';			
-
-	$fecha1=$_POST['start_at'];
-	$fecha2=$_POST['created_at'];
-	$proyecto=$_POST['project_id'];
-	$prioridad=$_POST['priority_id'];
-	$tipo=$_POST['kind_id'];
-	$estado=$_POST['status_id'];		
-
-if(isset($_POST['generar_reporte'])){
-
+	require 'Classes/PHPExcel.php';	
 
 	//Consulta
 	//$sql = "SELECT id, title, description, created_at FROM ticket";
-	//$sql = "SELECT * FROM ticket order by created_at desc";
-	$sql =("SELECT *  FROM ticket where kind_id='$tipo' AND project_id='$proyecto' AND status_id='$estado' AND priority_id ='$prioridad' AND created_at BETWEEN '$fecha1' AND '$fecha2' ORDER BY created_at desc");	
-
+	$sql = "SELECT * FROM ticket ORDER BY created_at desc";
 	$resultado = $con->query($sql);
 	//$query = mysqli_query($con, $sql);
 	$fila = 7; //Establecemos en que fila inciara a imprimir los datos
@@ -236,5 +224,4 @@ if(isset($_POST['generar_reporte'])){
 	
 	//$writer = new PHPExcel_Writer_Excel2007($objPHPExcel);
 	$writer->save('php://output');
-}
 ?>
