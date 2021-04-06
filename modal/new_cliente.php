@@ -49,21 +49,8 @@
                             <input name="email" type="text" class="form-control has-feedback-left" placeholder="Correo Electronico" required>
                             <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                         </div>
-                        <!--Codigo ingresado por Carlos Bejarano -->
+                        <!--Codigo ingresado por Carlos Bejarano -->                        
                          <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="Fecha_Ini_Contrato" type="date" class="form-control" placeholder="Fecha Inicial del Contrato">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
-                        <!--Aqui termina -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="Fecha_Fin_Contrato" type="date" class="form-control" placeholder="Fecha Final del Contrato">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
-                        <!--Codigo ingresado por Carlos Bejarano -->
-                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <!--<input name="asigned_id" required type="text" class="form-control" placeholder="Asignar asesor de soporte">
-                                <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>-->
-
                                 <select class="form-control" name="asigned_id" >
                                     <option selected="" value="">-- Seleccione Asesor de soporte --</option>
                                   <?php foreach($asesores as $p):?>
@@ -72,19 +59,10 @@
                                 </select>
                         </div>                        
                         <!--Codigo ingresado por Carlos Bejarano -->
-                        <div class="col-md-12 col-sm-12 col-xs-34 form-group has-feedback">
-                                <!-- <input name="Observaciones" required type="text" class="form-control" placeholder="Observaciones" required> -->
+                        <div class="col-md-12 col-sm-12 col-xs-34 form-group has-feedback">                                
                                 <textarea name="Observaciones" required type="text" class="form-control"  placeholder="Observaciones" required></textarea>
                                 <span class="required" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="Fecha_Ini_Servicio" type="date" class="form-control" placeholder="Fecha Inicial del Servicio">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="Fecha_Fin_Servicio" type="date" class="form-control" placeholder="Fecha Final del Servicio">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
+                        </div>                        
 
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <select class="form-control" required name="status_cliente">

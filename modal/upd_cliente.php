@@ -26,12 +26,12 @@
                             <input name="mod_Nit" id="mod_Nit" type="text" class="form-control" required>
                             <span class="fa fa-signal form-control-feedback right" aria-hidden="true"></span>
                         </div>
-                        <!--Aqui termina -->
-                        <!--<input type="hidden" id="mod_id" name="mod_id"> -->
+                        
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <input name="mod_name_Empresa" id="mod_name_Empresa" type="text" class="form-control" required>
                             <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                         </div>
+
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <input name="mod_name_Representante" id="mod_name_Representante" type="text" class="form-control" required>
                             <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
@@ -45,15 +45,8 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <input name="mod_email" id="mod_email" type="text" class="form-control has-feedback-left" required>
                             <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                          <input name="mod_Fecha_Ini_Contrato" type="date" id="mod_Fecha_Ini_Contrato"class="form-control">
-                            
-                        </div>
-                        <!--Aqui termina -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                            <input name="mod_Fecha_Fin_Contrato" id="mod_Fecha_Fin_Contrato" type="date" class="form-control">                            
-                        </div>
+                        </div>  
+
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                                 <select class="form-control" name="mod_asigned_id" id="mod_asigned_id">
                                     <option selected="" value="">-- Cambiar Asesor de soporte --</option>
@@ -62,40 +55,33 @@
                                   <?php endforeach; ?>
                                 </select>
                         </div>
+
                         <div class="col-md-12 col-sm-12 col-xs-34 form-group has-feedback">
                                 <!-- <input name="Observaciones" required type="text" class="form-control" placeholder="Observaciones" required> -->
                                 <textarea name="mod_Observaciones" id="mod_Observaciones" type="text" class="form-control"></textarea>
                                 <span class="required" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="mod_Fecha_Ini_Servicio" id="mod_Fecha_Ini_Servicio" type="date" class="form-control">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                <input name="mod_Fecha_Fin_Servicio" id="mod_Fecha_Fin_Servicio" type="date" class="form-control">
-                                <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
-                        </div>
+                        </div>  
+
                         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
                             <select class="form-control" required name="mod_status_cliente" id="mod_status_cliente">
                                     <option value="" selected>-- Selecciona estado --</option>
                                     <option value="1" >Activo</option>
                                     <option value="0" >Inactivo</option>  
                             </select>
-                        </div>                        
-                       <div class="ln_solid"></div>
+                        </div> 
+
+                        <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                   <button id="upd_data" type="submit" class="btn btn-success">Actualizar</button>
-                                  <!--  <input type="submit" class="btn btn-success" value="Guardar">  -->
-                                  <input type="reset" class="btn btn-success" value="Borrar"/> 
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                  <button type="reset" class="btn btn-danger" />Borrar </button>
+                                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
                                   
                                 </div>
                             </div>                             
                     </form>
                 </div>
-                <!-- <div class="modal-footer"> -->
-                        
+                <!-- <div class="modal-footer"> -->                        
                     <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> -->
                 <!-- </div> -->
             </div>

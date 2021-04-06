@@ -32,24 +32,19 @@
 		$represent=mysqli_real_escape_string($con,(strip_tags($_POST["name_Representante"],ENT_QUOTES)));
 		$telefono=intval($_POST['telefono']);
 		$email=$_POST["email"];
-		$Fecha_Ini_Contrato=$_POST["Fecha_Ini_Contrato"];
-		$Fecha_Fin_Contrato=$_POST["Fecha_Fin_Contrato"];		
+		//$Fecha_Ini_Contrato=$_POST["Fecha_Ini_Contrato"];
+		//$Fecha_Fin_Contrato=$_POST["Fecha_Fin_Contrato"];		
 		$Observaciones=$_POST["Observaciones"];
-		$Fecha_Ini_Servicio=$_POST["Fecha_Ini_Servicio"];
-		$Fecha_Fin_Servicio=$_POST["Fecha_Fin_Servicio"];
+		//$Fecha_Ini_Servicio=$_POST["Fecha_Ini_Servicio"];
+		//$Fecha_Fin_Servicio=$_POST["Fecha_Fin_Servicio"];
 		$user_id = $_SESSION["user_id"];
 		$asesor=mysqli_real_escape_string($con,(strip_tags($_POST["asigned_id"],ENT_QUOTES)));
 		$status=intval($_POST['status_cliente']); 
-
-		//$password=mysqli_real_escape_string($con,(strip_tags(sha1(md5($_POST["password"])),ENT_QUOTES)));		
-		//$end_name=$name." ".$lastname;		
-		//$created_at=date("Y-m-d H:i:s");
-		//$user_id=$_SESSION['user_id'];
-		//$profile_pic="default.png";
+		
 		//$is_admin=0;
 		//if(isset($_POST["is_admin"])){$is_admin=1;}
  
-			$sql="INSERT INTO clientes (Nit, name_Empresa, name_Representante, telefono, email, Fecha_Ini_Contrato, Fecha_Fin_Contrato, Observaciones, Fecha_Ini_Servicio, Fecha_Fin_Servicio, user_id, asigned_id, is_active) VALUES ('$nit','$empresa', '$represent', '$telefono', '$email', '$Fecha_Ini_Contrato', '$Fecha_Fin_Contrato', '$Observaciones', '$Fecha_Ini_Servicio', '$Fecha_Fin_Servicio', '$user_id', '$asesor', $status)";
+			$sql="INSERT INTO clientes (Nit, name_Empresa, name_Representante, telefono, email, Observaciones, user_id, asigned_id, is_active) VALUES ('$nit','$empresa', '$represent', '$telefono', '$email', '$Observaciones', '$user_id', '$asesor', $status)";
 			$query_new_insert = mysqli_query($con,$sql);
 				if ($query_new_insert){
 					$messages[] = "El cliente ha sido ingresado satisfactoriamente.";

@@ -81,7 +81,7 @@ $( "#add_cliente" ).submit(function( event ) {
 
 // success
 
-$( "#upd" ).submit(function( event ) {
+$( "#upd_cliente" ).submit(function( event ) {
   $('#upd_data').attr("disabled", true);
   
  var parametros = $(this).serialize();
@@ -106,28 +106,30 @@ $( "#upd" ).submit(function( event ) {
             var name_Empresa = $("#name_Empresa"+id).val();
             var name_Representante = $("#name_Representante"+id).val();
             var telefono = $("#telefono"+id).val();
-            var email = $("#email"+id).val();
-            var Fecha_Ini_Contrato = $("#Fecha_Ini_Contrato"+id).val();
-            var Fecha_Fin_Contrato = $("#Fecha_Fin_Contrato"+id).val();
+            var email = $("#email"+id).val();            
             var email = $("#email"+id).val();
             var asigned_id =$("#asigned_id"+id).val();
             var Observaciones = $("#Observaciones"+id).val();
-            var Fecha_Ini_Servicio = $("#Fecha_Ini_Servicio"+id).val();
-            var Fecha_Fin_Servicio = $("#Fecha_Fin_Servicio"+id).val();
             var status_cliente = $("#status_cliente"+id).val();        
+                        
             //Las variables de arriba corresponden a los datos guardados en new_cliente.php y las de abajo son de upd_cliente.php    
             $("#mod_id_cliente").val(id);            
             $("#mod_Nit").val(nit);
             $("#mod_name_Empresa").val(name_Empresa);
             $("#mod_name_Representante").val(name_Representante);
             $("#mod_telefono").val(telefono);
-            $("#mod_email").val(email);
-            $("#mod_Fecha_Ini_Contrato").val(Fecha_Ini_Contrato);
-            $("#mod_Fecha_Fin_Contrato").val(Fecha_Fin_Contrato);
+            $("#mod_email").val(email);            
             $("#mod_asigned_id").val(asigned_id);
             $("#mod_Observaciones").val(Observaciones);
-            $("#mod_Fecha_Ini_Servicio").val(Fecha_Ini_Servicio);
-            $("#mod_Fecha_Fin_Servicio").val(Fecha_Fin_Servicio);
             $("#mod_status_cliente").val(status_cliente);
+
+            //var Fecha_Ini_Contrato = $("#Fecha_Ini_Contrato"+id).val();
+            //var Fecha_Fin_Contrato = $("#Fecha_Fin_Contrato"+id).val();
+            //var Fecha_Ini_Servicio = $("#Fecha_Ini_Servicio"+id).val();
+            //var Fecha_Fin_Servicio = $("#Fecha_Fin_Servicio"+id).val();
+            //$("#mod_Fecha_Ini_Contrato").val(Fecha_Ini_Contrato);
+            //$("#mod_Fecha_Fin_Contrato").val(Fecha_Fin_Contrato);
+            //$("#mod_Fecha_Ini_Servicio").val(Fecha_Ini_Servicio);
+            //$("#mod_Fecha_Fin_Servicio").val(Fecha_Fin_Servicio);            
         }
 </script>

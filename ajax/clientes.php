@@ -88,8 +88,8 @@
                             $represent=$r['name_Representante'];
                             $telefono=$r['telefono'];
                             $email=$r['email'];
-                            $Fecha_Ini_Contrac=$r['Fecha_Ini_Contrato'];
-                            $Fecha_Fin_Contrac=$r['Fecha_Fin_Contrato'];
+                            //$Fecha_Ini_Contrac=$r['Fecha_Ini_Contrato'];
+                            //$Fecha_Fin_Contrac=$r['Fecha_Fin_Contrato'];
                             $asesor=$r['asigned_id'];
                             $Observation = $r['Observaciones'];
                             //$created_at=date('d/m/Y', strtotime($r['created_at']));
@@ -104,8 +104,8 @@
                     <input type="hidden" value="<?php echo $represent;?>" id="name_Representante<?php echo $id;?>">
                     <input type="hidden" value="<?php echo $telefono;?>" id="telefono<?php echo $id;?>">
                     <input type="hidden" value="<?php echo $email;?>" id="email<?php echo $id;?>">
-                    <input type="hidden" value="<?php echo $Fecha_Ini_Contrac;?>" id="Fecha_Ini_Contrato<?php echo $id;?>">
-                    <input type="hidden" value="<?php echo $Fecha_Fin_Contrac;?>" id="Fecha_Fin_Contrato<?php echo $id;?>">
+               <!-- <input type="hidden" value="<?php echo $Fecha_Ini_Contrac;?>" id="Fecha_Ini_Contrato<?php echo $id;?>">
+                    <input type="hidden" value="<?php echo $Fecha_Fin_Contrac;?>" id="Fecha_Fin_Contrato<?php echo $id;?>"> -->
                     <input type="hidden" value="<?php echo $asesor;?>" id="asigned_id<?php echo $id;?>">
                     <input type="hidden" value="<?php echo $Observation;?>" id="Observaciones<?php echo $id;?>">
                     <input type="hidden" value="<?php echo $status;?>" id="status_cliente<?php echo $id;?>">

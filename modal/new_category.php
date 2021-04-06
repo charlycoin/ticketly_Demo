@@ -23,6 +23,7 @@
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                               <button id="save_data" type="submit" class="btn btn-success">Guardar</button>
+                              <button type="reset" class="btn btn-danger" />Borrar </button>
                               <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
