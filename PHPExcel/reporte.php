@@ -8,7 +8,8 @@
 	$proyecto=$_POST['project_id'];
 	$prioridad=$_POST['priority_id'];
 	$tipo=$_POST['kind_id'];
-	$estado=$_POST['status_id'];		
+	$estado=$_POST['status_id'];
+
 
 if(isset($_POST['generar_reporte'])){
 

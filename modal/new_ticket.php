@@ -42,14 +42,16 @@
                             </label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
                             <!-- <div class="col-md-9 col-sm-9 col-xs-12"> -->
-                                <select class="form-control" name="cliente_id" >
+                                <select  class="form-control" name="cliente_id" >
+                                <!--<input type="search" name="cliente_id" placeholder="Buscar" autofocus required>-->
                                     <option selected="" value="">-- Selecciona --</option>
                                       <?php foreach($client as $p):?>
                                         <option value="<?php echo $p['id_cliente']; ?>"><?php echo $p['name_Empresa']; ?></option>
                                       <?php endforeach; ?>
                                 </select>
                             </div>
-                        </div>
+                        </div>                        
+
                         <!-- Codigo ingresado por Carlos Bejarano-->
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"  for="first-name">Asesor
@@ -154,4 +156,4 @@
             </div>
         </div>
     </div> <!-- /Modal -->
-    
+

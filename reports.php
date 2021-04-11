@@ -32,7 +32,8 @@
                         </div>
 
                         <!-- form search -->
-                        <form class="form-horizontal" role="form" method="post" action="PHPExcel/reporte.php">
+                        <!-- <form class="form-horizontal" role="form" method="post" action="PHPExcel/reporte.php">-->
+                        <form class="form-horizontal" role="form" >
                             <input type="hidden" name="view" value="reports">
                             <div class="form-group">
                             <div class="col-lg-3">
@@ -102,7 +103,8 @@
                                       <span class="fa fa-file-pdf-o" aria-hidden="true"></span> Generar_PDF
                                     </a>
                                     <a style="margin-right: 3px" href="PHPExcel/reporte2.php" class="btn btn-sm btn-success" target="_blank" ><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar_Excel</i></a>
-                                    <a style="margin-right: 3px" class="btn btn-sm btn-success" data-toggle="modal" data-target="#new_report" ><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar Reporte</i></a>
+                                    <!--<a style="margin-right: 3px" class="btn btn-sm btn-success" data-toggle="modal" data-target="#new_report" ><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar Reporte</i></a> -->
+                                    <a style="margin-right: 3px" href="#" class="btn btn-sm btn-success" title='Generar Reporte' data-toggle="modal" data-target=".bs-example-modal-lg-upd"><span class="fa fa-file-excel-o" aria-hidden="true"></span> Generar Reporte</i></a>
                                 </div>                                
                             </div>
                         </form>
