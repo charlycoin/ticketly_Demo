@@ -49,8 +49,8 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
                 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>                
               </div>
             </form>
             </div>

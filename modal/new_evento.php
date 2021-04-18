@@ -42,20 +42,21 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
                   <div class="form-group">
                     <label for="start" class="col-sm-2 control-label">Fecha Inicial</label>
                     <div class="col-sm-10">
-                      <input type="text" name="start" class="form-control" id="start" readonly>
+                      <input type="text" name="start" class="form-control" id="start">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="end" class="col-sm-2 control-label">Fecha Final</label>
                     <div class="col-sm-10">
-                      <input type="text" name="end" class="form-control" id="end" readonly>
+                      <input type="text" name="end" class="form-control" id="end">
                     </div>
                   </div>
                 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="reset" class="btn btn-danger" />Borrar </button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
               </div>
             </form>
             </div>

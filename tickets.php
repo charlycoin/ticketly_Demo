@@ -177,3 +177,4 @@ $( "#img" ).submit(function( event ) {
     }  
   }
 </script>
+

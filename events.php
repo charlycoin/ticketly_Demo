@@ -25,9 +25,9 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
                 <div class="col-md-12 col-sm-12 col-xs-12">
  
                 <div class="x_panel">
-                <div class="x_title">
+                <div class="app-title">
                     
-                        <h2>Eventos</h2>
+                        <h2><i class="fa fa-calendar"></i> Calendario para administrar eventos</h2>
                         <!-- <p class="lead">Completa con rutas de archivo predefinidas que no tendrás que cambiar!</p> -->
                         <div id="calendar" class="col-centered"> </div>                    
                         <div class="clearfix"></div>
@@ -45,13 +45,12 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
     <!-- /.container -->
  
     <!-- jQuery Version 1.11.1 / Se actualiza la version del jQuery v2.2.3 el dìa 10-Marzo-2021-->
-    <script src="js/jquery/dist/jquery.js"></script>  
+    <script src="js/jquery/dist/jquery.js"></script> 
 
-                
-    
     <script> 
     $(document).ready(function() {
- 
+
+       //var calendarEl = document.getElementById('calendar'); 
        var date = new Date();
        var yyyy = date.getFullYear().toString();
        //var yyyy = (date.getFullYear()).toString().length == 1 ? "0"+(date.getFullYear()).toString() : (date.getFullYear()).toString();
@@ -63,14 +62,26 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
                 language: 'es',
                 left: 'prev,next today',
                 center: 'title',
-                right: 'month,basicWeek,basicDay',
+                //right: 'month,basicWeek,basicDay',
+                right: 'month,agendaWeek,agendaDay,listDay,listWeek'
+                //right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
  
             },
+            views: {
+                listDay: { buttonText: 'List Day' },
+                listWeek: { buttonText: 'List Week' }
+              },
             defaultDate: yyyy+"-"+mm+"-"+dd,
             editable: true,
+            droppable: true, // this allows things to be dropped onto the calendar
             eventLimit: true, // allow "more" link when too many events
             selectable: true,
             selectHelper: true,
+            navLinks: true, // can click day/week names to navigate views
+            nowIndicator: true,  
+            //weekNumbers: true,
+            //dayMaxEvents: true,          
+
             select: function(start, end) {
                 
                 $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD HH:mm:ss'));
@@ -101,8 +112,8 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
             
                 //$start=$event['start'];
                 $start = explode(" ", $event['start']);
-
                 $end = explode(" ", $event['end']);
+                
                 if($start[1] == '00:00:00'){
                     $start = $start[0];
                 }else{
@@ -159,7 +170,7 @@ $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
                 }
             });
         }
-        
+        calendar.render();
     });
  
 </script>

@@ -47,7 +47,7 @@
                                     <option selected="" value="">-- Selecciona --</option>
                                       <?php foreach($client as $p):?>
                                         <option value="<?php echo $p['id_cliente']; ?>"><?php echo $p['name_Empresa']; ?></option>
-                                      <?php endforeach; ?>
+                                      <?php endforeach; ?>                                    
                                 </select>
                             </div>
                         </div>                        
@@ -136,7 +136,7 @@
                                         <!-- <span class="btn btn-my-button btn-file"> -->
                                             <!-- <form class="form-horizontal form-label-left input_mask" method="post" id="formulario" name="formulario" enctype="multipart/form-data">-->
                                             <!-- Agregar contenido multimedia: -->
-                                            <input type="file" class="form-control" name="archivo" id="archivo" multiple="">                                                     
+                                <input type="file" class="form-control" name="archivo" id="archivo" multiple="">                                                     
                                             <!--</form>-->
                                         <!--</span> -->
                             </div>                                                                                                                            
@@ -157,3 +157,25 @@
         </div>
     </div> <!-- /Modal -->
 
+    <!-- Essential javascripts for application to work-->
+    <script src="js/plugins/jquery-3.3.1.min.js"></script>
+    <!--<script src="js/plugins/popper.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/plugins/main.js"></script>-->
+    <!-- The javascript plugin to display page loading on top-->
+    <!-- <script src="js/plugins/pace.min.js"></script>-->
+    <!-- Page specific javascripts-->
+    <!--<script type="text/javascript" src="js/plugins/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dropzone.js"></script> -->
+    <script type="text/javascript" src="js/plugins/select2.min.js"></script>
+    
+
+<!--<script type="text/javascript" src="js/plugins/select2.js"></script>-->
+<script type="text/javascript">  
+    
+    $('#demoSelect').select2();
+    /*$(document).ready(function() {
+        $('.demoSelect').select2();
+    });   */
+</script>

@@ -47,8 +47,12 @@
         <!-- FullCalendar -->
         <!--<script src='js/moment.min.js'></script>--> <!--Ya esta incluido en el footer --> 
         <script src='js/fullcalendar/fullcalendar.min.js'></script>
-        <script src='js/fullcalendar/fullcalendar.js'></script>
-        <script src='js/fullcalendar/locale/es.js'></script>     
+        <!--<script src='js/fullcalendar/fullcalendar.js'></script>-->
+        <script src='js/fullcalendar/locale/es.js'></script>
+
+        <!--<script type="text/javascript" src="js/plugins/moment.min.js"></script> -->
+        <script type="text/javascript" src="js/plugins/jquery-ui.custom.min.js"></script>
+        <!--<script type="text/javascript" src="js/plugins/fullcalendar.min.js"></script>-->
         
     </body>
 </html>
