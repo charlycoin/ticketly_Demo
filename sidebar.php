@@ -74,7 +74,7 @@
         <div class="nav_menu">
             <nav>
                 <div class="nav toggle">
-                    <a id="menu_toggle"><i class="btn-xs btn-success fa fa-bars" style="font-size:22px"></i></a>
+                    <a id="menu_toggle" data-toggle="sidebar"><i class="btn-xs btn-success fa fa-bars" style="font-size:22px"></i></a>
                     <!--<a id="menu_toggle"><i class="fa fa-bars"></i></a> -->
                 </div>
                 <ul class="nav navbar-nav navbar-right">

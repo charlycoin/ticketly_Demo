@@ -3,30 +3,24 @@
     include "head.php";
     include "sidebar.php"; 
 
-//$sql = "SELECT id, title, start, final, color FROM events ";
- 
+//$sql = "SELECT id, title, start, final, color FROM events "; 
 $events=mysqli_query($con, "SELECT id, title, start, end, color FROM events");
 //$req = $con->prepare($sql);
 //$events = mysqli_fetch_array($req);
 //$req = $con->prepare($sql);
 //$req->execute(); 
 //$events = $req->fetchAll();
-
-
-
 ?>
-    <!-- Navigation -->
+    <!-- Navigation -->   
     
     <!-- Page Content -->
     <div class="right_col" role="main">
     <div class="container-fluid">
             <div class="page-title">
                 <div class="clearfix"></div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
- 
+                <div class="col-md-12 col-sm-12 col-xs-12"> 
                 <div class="x_panel">
-                <div class="app-title">
-                    
+                <div class="app-title">                    
                         <h2><i class="fa fa-calendar"></i> Calendario para administrar eventos</h2>
                         <!-- <p class="lead">Completa con rutas de archivo predefinidas que no tendrás que cambiar!</p> -->
                         <div id="calendar" class="col-centered"> </div>                    

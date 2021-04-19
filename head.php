@@ -16,16 +16,16 @@
         $created_at = $row['created_at'];
   
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta name="description" content="Sistema de informacion para mesas de ayuda y soporte técnico">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Carlos Bejarano">
         <link rel="shortcut icon" href="./images/favicon.ico">
         <title><?php echo $title." ".$name; ?> </title>
 
@@ -46,9 +46,8 @@
         <link href="css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
         <link href="css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
         <link href="css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-        <link href="css/datatables.net-bs/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="css/datatables.net-bs/css/jquery.dataTables.min.css" rel="stylesheet">        
 
-        
         <!-- jQuery custom content scroller -->
         <link href="css/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
 
@@ -69,9 +68,11 @@
         <!-- FullCalendar -->
         <link href='css/fullcalendar.css' rel='stylesheet' />  
         <!-- Custom CSS -->
-        <style>        
+        <style>  
         #calendar {
-            max-width: 800px;
+            max-width: 980px;
+            margin: 20px auto;
+            padding: 0 10px;
         }
         .col-centered{
             float: none;
@@ -87,7 +88,7 @@
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                          <a href="#" class="site_title"><i class="fa fa-ticket"></i> <span>Softweb<strong>Tickets</strong></span></a>                          
+                          <a href="dashboard_2.php" class="site_title"><i class="fa fa-ticket"></i> <span>Softweb<strong>Tickets</strong></span></a>                        
                         </div>
                         <div class="clearfix"></div>
 

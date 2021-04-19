@@ -37,14 +37,14 @@
                             </div>
                         </div>
                         <!-- Codigo ingresado por Carlos Bejarano-->
-                        <div class="form-group">
+                        <div class="form-group" >
                             <label class="control-label col-md-3 col-sm-3 col-xs-12"  for="first-name">Cliente
                             </label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
                             <!-- <div class="col-md-9 col-sm-9 col-xs-12"> -->
                                 <select  class="form-control" name="cliente_id" >
                                 <!--<input type="search" name="cliente_id" placeholder="Buscar" autofocus required>-->
-                                    <option selected="" value="">-- Selecciona --</option>
+                                    <option selected="" value="" >-- Selecciona --</option>
                                       <?php foreach($client as $p):?>
                                         <option value="<?php echo $p['id_cliente']; ?>"><?php echo $p['name_Empresa']; ?></option>
                                       <?php endforeach; ?>                                    
@@ -159,23 +159,25 @@
 
     <!-- Essential javascripts for application to work-->
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
-    <!--<script src="js/plugins/popper.min.js"></script>
+    <script src="js/plugins/popper.min.js"></script>
     <script src="js/plugins/bootstrap.min.js"></script>
-    <script src="js/plugins/main.js"></script>-->
+    <script src="js/plugins/main.js"></script>
     <!-- The javascript plugin to display page loading on top-->
-    <!-- <script src="js/plugins/pace.min.js"></script>-->
+    <script src="js/plugins/pace.min.js"></script>
     <!-- Page specific javascripts-->
-    <!--<script type="text/javascript" src="js/plugins/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="js/plugins/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="js/plugins/dropzone.js"></script> -->
     <script type="text/javascript" src="js/plugins/select2.min.js"></script>
+    <script type="text/javascript" src="js/plugins/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dropzone.js"></script>
     
 
 <!--<script type="text/javascript" src="js/plugins/select2.js"></script>-->
 <script type="text/javascript">  
     
     $('#demoSelect').select2();
+    
     /*$(document).ready(function() {
-        $('.demoSelect').select2();
-    });   */
+        $('.js-example-basic-single').select2();
+    });  */
 </script>
+    
