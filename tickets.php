@@ -10,7 +10,7 @@
                 <div class="clearfix"></div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                             <?php
-                                include("modal/new_ticket.php");
+                                include("modal/new_ticket_DEMO.php");
                                 include("modal/upd_ticket.php");                                
                             ?>
                     <div class="x_panel">                        

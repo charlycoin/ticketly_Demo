@@ -32,6 +32,7 @@
         
         <!-- Bootstrap -->
         <link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap/dist/css/bootstrap-select.min.css"> 
         
         <!-- Font Awesome -->
         <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">

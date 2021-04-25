@@ -68,7 +68,7 @@
                         <th class="column-title">Rol </th>
                         <th class="column-title">Descripción </th>
                         <th class="column-title">Estado </th>                        
-                        <th class="column-title no-link last"><span class="nobr"></span></th>
+                        <th class="column-title text-center"><span class="nobr">Acciones</span></th>
                     </tr>
                 </thead>
                 <tbody>

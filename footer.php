@@ -11,6 +11,7 @@
         <script src="js/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
         <script src="css/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap-select.min.js"></script>
         <!-- FastClick -->
         <script src="js/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
