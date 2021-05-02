@@ -11,6 +11,7 @@
                     <?php
                         include("modal/new_rol.php");
                         include("modal/upd_rol.php");
+                        include("modal/upd_permisos.php");
                     ?>
                     <div class="x_panel">
                         <div class="x_title">
@@ -111,4 +112,20 @@ $( "#upd_rol" ).submit(function( event ) {
             $("#mod_descripcion_rol").val(description);
             $("#mod_status_rol").val(status);            
         }
+
+    function obtener_permisos(id_rol){
+    var idrol = id_rol;
+    var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+    var ajaxUrl = 'ajax/Permisos/getPermisosRol/'+idrol;
+    request.open("GET",ajaxUrl,true);
+    request.send();
+
+        request.onreadystatechange = function(){
+            if(request.readyState == 4 && request.status == 200){
+                document.querySelector('#contentAjax').innerHTML = request.responseText;
+                $('.modalPermisos').modal('show');
+                document.querySelector('#upd_permisos').addEventListener('submit',fntSavePermisos,false);
+            }
+        }
+    }
 </script>

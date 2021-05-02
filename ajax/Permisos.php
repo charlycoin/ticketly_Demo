@@ -6,15 +6,15 @@
 			parent::__construct();
 		}
 
-		public function getPermisosRol(int $idrol)
+		public function getPermisosRol(int $id_rol)
 		{
-			$rolid = intval($idrol);
+			$rolid = intval($id_rol);
 			if($rolid > 0)
 			{
 				$arrModulos = $this->model->selectModulos();
 				$arrPermisosRol = $this->model->selectPermisosRol($rolid);
 				$arrPermisos = array('r' => 0, 'w' => 0, 'u' => 0, 'd' => 0);
-				$arrPermisoRol = array('idrol' => $rolid );
+				$arrPermisoRol = array('id_rol' => $rolid );
 
 				if(empty($arrPermisosRol))
 				{
@@ -46,12 +46,12 @@
 		{
 			if($_POST)
 			{
-				$intIdrol = intval($_POST['idrol']);
+				$intIdrol = intval($_POST['id_rol']);
 				$modulos = $_POST['modulos'];
 
 				$this->model->deletePermisos($intIdrol);
 				foreach ($modulos as $modulo) {
-					$idModulo = $modulo['idmodulo'];
+					$idModulo = $modulo['id_modulo'];
 					$r = empty($modulo['r']) ? 0 : 1;
 					$w = empty($modulo['w']) ? 0 : 1;
 					$u = empty($modulo['u']) ? 0 : 1;

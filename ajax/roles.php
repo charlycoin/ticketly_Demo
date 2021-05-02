@@ -96,6 +96,7 @@
                         <td><?php echo $description;?></td>
                         <td ><?php echo $status_f; ?></td>                        
                         <td ><span class="pull-right">
+                        <a href="#" class='btn btn-default' title='Permisos' onclick="obtener_permisos('<?php echo $id;?>');" data-toggle="modal" data-target=".modalPermisos"><i class="fa fa-key" aria-hidden="true"></i></a>
                         <a href="#" class='btn btn-default' title='Editar Rol' onclick="obtener_datos('<?php echo $id;?>');" data-toggle="modal" data-target=".bs-example-modal-lg-upd"><i class="glyphicon glyphicon-edit"></i></a> 
                         <a href="#" class='btn btn-default' title='Borrar Rol' onclick="eliminar('<?php echo $id; ?>')"><i class="glyphicon glyphicon-trash"></i> </a></span></td>
                     </tr>
