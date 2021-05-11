@@ -103,7 +103,7 @@
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                          <label for="archivo">Ajunto </label>
+                          <label for="archivo">Ajunto <span class="required">*</span></label>
                           <input type="file" class="form-control" name="archivo" id="archivo" multiple="">
                         </div>
 

@@ -50,6 +50,8 @@
         <script type="text/javascript" src="js/Chart.js/elements/js/graphix.0.8.min.js"  ></script>
         <script type="text/javascript" src="js/Chart.js/elements/js/cufon-yui.js" ></script>
         <script type="text/javascript" src="js/Chart.js/elements/js/cufon.js" ></script>
+
+        <script src="js/main.js"></script>        
         
         <script type="text/javascript">
             $(function(){             

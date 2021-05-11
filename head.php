@@ -64,6 +64,7 @@
         <!-- <link rel="stylesheet" href="css/AdminLTE.min.css">-->
         <!-- MICSS button[type="file"] -->
         <link rel="stylesheet" href="css/micss.css">  
+        
 
         <!-- Codigo ingresado por Carlos Bejarano-->
         <!-- FullCalendar -->
@@ -78,8 +79,13 @@
         .col-centered{
             float: none;
             margin: 0 auto;
+        }        
+
+        .embed-responsive-16by9::before {
+          padding-top: 56.25%;
         }
-        </style>                   
+        </style>
+
 
     </head>
 
