@@ -290,7 +290,7 @@ include './lib/class_mysql.php';
                     
                         <!--Còdigo que muestra en una tabla responsive las atenciones realizadas al ticket-->   
                         
-                        <div class="row">
+                        <!--<div class="form-group">
                             <div class="col-sm-offset-5">
                                 <div class="radio">
                                     <label>
@@ -307,9 +307,9 @@ include './lib/class_mysql.php';
                                     </label>
                                  </div>
                             </div>
-                        </div>
+                        </div>-->
                     
-                        <br>                    
+                                         
                         <div class="form-group">
                         
                           <div class="col-sm-offset-2 col-sm-10 text-center">                              

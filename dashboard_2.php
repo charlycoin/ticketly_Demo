@@ -524,56 +524,56 @@
                             </div>
                         </div>
                     </div> <!--End tabla categorias -->
-                    <div class="row">
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Line Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Bar Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Radar Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="radarChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Polar Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="polarChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Pie Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Doughnut Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
+                   <!-- <div class="row">
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Line Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Bar Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Radar Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="radarChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Polar Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="polarChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Pie Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="tile">
+                            <h3 class="tile-title">Doughnut Chart</h3>
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div> End graficos de ejemplo-->
                     <!--<div class="col-md-6"> 
                     <?php
                                 $mysqli = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -696,11 +696,13 @@
     });
 </script>
 
+   
 <!-- Page specific javascripts-->
+<!-- 
 <script type="text/javascript" src="js/plugins/chart.js"></script>
-<script type="text/javascript">
-
-      var data = {
+<script type="text/javascript">    
+    //var Asignados = $("#consultaAsignados"+id).val();
+      var data = {        
         labels: ["January", "February", "March", "April", "May"],
         datasets: [
             {
@@ -711,7 +713,7 @@
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56]
+                data: [56, 59, 80, 81, 56]
             },
             {
                 label: "My Second dataset",
@@ -764,4 +766,4 @@
       var ctxd = $("#doughnutChartDemo").get(0).getContext("2d");
       var doughnutChart = new Chart(ctxd).Doughnut(pdata);
     </script>
-
+-->

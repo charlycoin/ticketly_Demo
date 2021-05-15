@@ -35,7 +35,7 @@
                                 <div class="col-lg-6">
                                     <div class="input-group">                                    
                                         <span class="input-group-addon"><i class="fa fa-support"></i></span>
-                                        <select name="priority_id" class="form-control">
+                                        <select name="priority_id" class="form-control" id="priority_id">
                                         <option value="">PRIORIDAD</option>
                                           <?php foreach($priorities as $p):?>
                                             <option value="<?php echo $p['id']; ?>" <?php if(isset($_GET["priority_id"]) && $_GET["priority_id"]==$p['id']){ echo "selected"; } ?>><?php echo $p['priority_name']; ?></option>
@@ -62,7 +62,7 @@
                                 <div class="col-lg-6">
                                     <div class="input-group">
                                         <span class="input-group-addon">ESTADO</span>
-                                        <select name="status_id" class="form-control">
+                                        <select name="status_id" class="form-control" id="status_id">
                                           <?php foreach($statuses as $p):?>
                                             <option value="<?php echo $p['id']; ?>" <?php if(isset($_GET["status_id"]) && $_GET["status_id"]==$p['id']){ echo "selected"; } ?>><?php echo $p['status_name']; ?></option>
                                           <?php endforeach; ?>

@@ -6,15 +6,6 @@
 
 <?php
 
-    $projects =mysqli_query($con, "select * from project");
-    $priorities =mysqli_query($con, "select * from priority");
-    $statuses =mysqli_query($con, "select * from status");
-    $kinds =mysqli_query($con, "select * from kind");
-    $asesores = mysqli_query($con, "select * from asesor");
-    $categories =mysqli_query($con, "select * from category");
-    $client = mysqli_query($con, "select * from clientes");
-    $atenciones=mysqli_query($con, "select * from atencion");
-
 include './lib/class_mysql.php';
   
   global $sql_aten;
@@ -23,12 +14,14 @@ include './lib/class_mysql.php';
   $id = MysqlQuery::RequestGet('id');
   $sql = Mysql::consulta("SELECT * FROM ticket WHERE id= '$id'");
   $sql_aten = Mysql::consulta("SELECT * FROM atencion WHERE id_ticket= '$id'");
+  $sql_files = Mysql::consulta("SELECT * FROM files_ticket WHERE id_ticket= '$id'");
   $reg=mysqli_fetch_array($sql, MYSQLI_ASSOC);
   $reg2=mysqli_fetch_array($sql_aten, MYSQLI_ASSOC);
+  $reg3=mysqli_fetch_array($sql_files, MYSQLI_ASSOC);
   $status_id=$reg['status_id'];
-  $cliente_id=$reg['cliente_id'];  
+  $cliente_id=$reg['cliente_id']; 
+  $profile_pic=$reg['profile_pic']; 
   //$title=$reg['title'];
-
         $sql2 = mysqli_query($con, "select * from status where id=$status_id");
             if($c=mysqli_fetch_array($sql2)) {
             $name_statu=$c['status_name'];

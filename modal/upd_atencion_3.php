@@ -1,3 +1,4 @@
+<!-- Codigo ingresado por Carlos Bejarano-->
 <?php
     $id_soporte =mysqli_query($con, "select * from ticket");
     $projects =mysqli_query($con, "select * from project");
@@ -18,7 +19,7 @@
 
                         <!-- Modal Detalle-->
     <div class="modal fade bs-example-modal-lg-udp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-md">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">                
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
@@ -37,82 +38,56 @@
                      <div class="tab-pane active" id="tab_1">
                         <form class="form-horizontal" method="post" action="action/updatencion_3.php" enctype="multipart/form-data">
                         <div id="result2"></div>
+                        <p class="text-primary">Los campos con asterisco (<span class="required">*</span>) son obligatorios.</p>
 
                         <input type="hidden" name="mod_id" id="mod_id">
 
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Titulo<span class="required">*</span></label>                            
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                              <!--<input type="text" name="title" class="form-control" placeholder="Titulo" id="mod_title" readonly>-->
-                              <input class="form-control" readonly="" type="text" name="title" value="<?php echo $reg['title']?>">                              
+                        <div class="form-row">
+                            <div class="form-group col-md-4">                              
+                              <label>Asunto <span class="required">*</span></label>  
+                              <input class="form-control" readonly="" type="text" name="title" value="<?php echo $reg['title']?>">
                             </div>
-                        </div>  
-
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Solución: <span class="required">*</span>
-                            </label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                              <textarea name="detalle_atencion" class="form-control col-md-7 col-xs-12"  id="mod_detalle_atencion" placeholder="Detalle de la atención:"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Causa del soporte: <span class="required"></span>
-                            </label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <select class="form-control" name="id_causa_sop" >
-                                    <option selected="" value="">-- Selecciona --</option>
-                                      <?php foreach($causas as $p):?>
-                                        <option value="<?php echo $p['id_causa_sop']; ?>"><?php echo $p['causas_soporte']; ?></option>
+                            <div class="form-group col-md-4">
+                              <label >Estado <span class="required">*</span></label>                                
+                                    <select  class="form-control" name="status_id" required id="mod_status_id">
+                                        <option selected="" value="">-- Selecciona --</option>
+                                      <?php foreach($statuses as $p):?>
+                                        <option value="<?php echo $p['id']; ?>"><?php echo $p['status_name']; ?></option>
                                       <?php endforeach; ?>
-                                </select>
+                                    </select>                                
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Estado </label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <select  class="form-control" name="status_id" required id="mod_status_id">
-                                    <option selected="" value="">-- Selecciona --</option>
-                                  <?php foreach($statuses as $p):?>
-                                    <option value="<?php echo $p['id']; ?>"><?php echo $p['status_name']; ?></option>
-                                  <?php endforeach; ?>
-                                </select>
+                            <div class="form-group col-md-4">
+                              <label for="archivo">Ajunto <span class="required"></span></label>
+                              <input type="file" class="form-control" name="archivo" id="archivo" multiple="">
                             </div>
-                        </div>
-                        <!-- Codigo ingresado por Carlos Bejarano-->
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Asesor
-                            </label>
-                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                <select class="form-control" name="asigned_id" required id="mod_asigned_id">
-                                    <option selected="" value="">-- Selecciona --</option>
-                                  <?php foreach($asesores as $p):?>
-                                    <option value="<?php echo $p['id']; ?>"><?php echo $p['name']; ?></option>
-                                  <?php endforeach; ?>
-                                </select>
+                            <div class="form-group col-md-4">
+                                <label>Asesor <span class="required">*</span></label>                                
+                                    <select class="form-control" name="asigned_id" required id="mod_asigned_id">
+                                        <option selected="" value="">-- Selecciona --</option>
+                                      <?php foreach($asesores as $p):?>
+                                        <option value="<?php echo $p['id']; ?>"><?php echo $p['name']; ?></option>
+                                      <?php endforeach; ?>
+                                    </select>                                
                             </div>
-                        </div>
-                        <!-- Codigo ingresado por Carlos Bejarano-->
-                        <div class="form-group">                  
-                            
-                            <label for="archivo" class="control-label col-md-3 col-sm-3 col-xs-12">Ajunto </label>                                                      
-                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                        <!-- <span class="btn btn-my-button btn-file"> -->
-                                            <!-- <form class="form-horizontal form-label-left input_mask" method="post" id="formulario" name="formulario" enctype="multipart/form-data">-->
-               <!-- Agregar contenido multimedia: --><input type="file" class="form-control" name="archivo" id="archivo">                                                     
-                                            <!--</form>-->
-                                        <!--</span> -->
-                            </div>                                                                                                                            
-                        </div>
-
-                        <div class="ln_solid"></div>
+                            <div class="form-group col-md-8">
+                                <label>Causa del soporte <span class="required">*</span></label>                                
+                                    <select class="form-control" name="id_causa_sop" >
+                                        <option selected="" value="">-- Selecciona --</option>
+                                          <?php foreach($causas as $p):?>
+                                            <option value="<?php echo $p['id_causa_sop']; ?>"><?php echo $p['causas_soporte']; ?></option>
+                                          <?php endforeach; ?>
+                                    </select>                                
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label>Solución: <span class="required">*</span></label>                            
+                                  <textarea name="detalle_atencion" class="form-control col-md-7 col-xs-12"  id="mod_detalle_atencion" placeholder="Detalle de la atención:"></textarea>                            
+                            </div>                            
+                      </div>                                        
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                               <button id="upd_data" type="submit" class="btn btn-success">Guardar</button>
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                              <button type="reset" class="btn btn-danger" > Borrar </button>
+                              <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </form>

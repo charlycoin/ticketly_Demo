@@ -1,7 +1,7 @@
 <?php
 	//Incluimos librería y archivo de conexión
 	require_once '../config/config.php';
-	require 'Classes/PHPExcel.php';			
+	require 'Classes/PHPExcel.php';	
 
 	$fecha1=$_POST['start_at'];
 	$fecha2=$_POST['created_at'];
@@ -13,13 +13,14 @@
 
 if(isset($_POST['generar_reporte'])){
 
-
 	//Consulta
 	//$sql = "SELECT id, title, description, created_at FROM ticket";
 	//$sql = "SELECT * FROM ticket order by created_at desc";
-	$sql =("SELECT *  FROM ticket where kind_id='$tipo' AND project_id='$proyecto' AND status_id='$estado' AND priority_id ='$prioridad' AND created_at BETWEEN '$fecha1' AND '$fecha2' ORDER BY created_at desc");	
 
+	$sql =("SELECT *  FROM ticket where kind_id='$tipo' AND project_id='$proyecto' AND status_id='$estado' AND priority_id ='$prioridad' AND created_at BETWEEN '$fecha1' AND '$fecha2' ORDER BY created_at desc");
 	$resultado = $con->query($sql);
+
+
 	//$query = mysqli_query($con, $sql);
 	$fila = 7; //Establecemos en que fila inciara a imprimir los datos
 	
@@ -140,12 +141,16 @@ if(isset($_POST['generar_reporte'])){
 	//Recorremos los resultados de la consulta y los imprimimos
 	
 	while($rows = $resultado->fetch_assoc()){
-
+		
+		
+		$ticket_id=$rows['id'];
 		$asesor_id=$rows['asigned_id'];
 		$priority_id=$rows['priority_id'];
         $kind_id=$rows['kind_id'];
         $category_id=$rows['category_id'];
         $status_id=$rows['status_id'];
+
+        $ticket=mysqli_query($con, "select * from ticket where id=$ticket_id");
 
 		//$asesor = mysqli_query($con,"select * from asesor where id=$asesor_id");
 			$sql2 = mysqli_query($con, "select * from asesor where id=$asesor_id");
@@ -168,6 +173,8 @@ if(isset($_POST['generar_reporte'])){
                 if($c=mysqli_fetch_array($sql2)) {
                 $name_status=$c['status_name'];
             }
+
+
 		
 		$objPHPExcel->getActiveSheet()->setCellValue('A'.$fila, $rows['id']);
 		$objPHPExcel->getActiveSheet()->setCellValue('B'.$fila, $rows['title']);
@@ -191,13 +198,15 @@ if(isset($_POST['generar_reporte'])){
 	// definir origen de los valores
 	//$values = new PHPExcel_Chart_DataSeriesValues('Number', 'Productos!$D$7:$D$'.$fila);
 	$values = new PHPExcel_Chart_DataSeriesValues('Number', 'Tickets!$A$7:$A$'.$fila);
+	//$count = new PHPExcel_Calculation_Function(PHPExcel_Calculation_Function::CATEGORY_STATISTICAL,'CONTAR',$values);	
+	
 	
 	// definir origen de los rotulos
 	$categories = new PHPExcel_Chart_DataSeriesValues('String', 'Tickets!$C$7:$C$'.$fila);
 	
 	// definir  gráfico
 	$series = new PHPExcel_Chart_DataSeries(
-	PHPExcel_Chart_DataSeries::TYPE_BARCHART, // tipo de gráfico
+	PHPExcel_Chart_DataSeries::TYPE_LINECHART, // tipo de gráfico
 	PHPExcel_Chart_DataSeries::GROUPING_CLUSTERED,
 	array(0),
 	array(),
